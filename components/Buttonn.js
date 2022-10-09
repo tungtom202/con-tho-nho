@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
 const Buttonn = (props) => {
   return (
-    <TouchableOpacity style={styles.buttonBody}>
+    <TouchableOpacity style={styles.buttonBody} onPress={props.callback}>
       <Text style={styles.buttonText}>{props.children}</Text>
     </TouchableOpacity>
   );
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 20,
     height: 40,
-    
+
   },
   buttonText: {
     color: "white",
